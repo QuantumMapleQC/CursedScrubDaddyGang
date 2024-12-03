@@ -1,0 +1,145 @@
+body {
+    background-color: #008080;
+    font-family: "MS Sans Serif", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+/* Main window style */
+.window {
+    width: 70%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 2px solid #000080;
+    background-color: #FFFFFF;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header style for the window */
+.window-header {
+    background-color: #000080;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #808080;
+}
+
+.window-header span {
+    margin-left: 10px;
+}
+
+.window-header button {
+    background-color: #C0C0C0;
+    border: 1px solid #808080;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Content section */
+.window-content {
+    padding: 20px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    color: #000000;
+    overflow: hidden;
+}
+
+h1, h2 {
+    font-size: 16px;
+    color: #000080;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Media Gallery */
+.media-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.media-container {
+    border: 2px solid #C0C0C0;
+    padding: 10px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.media-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the space without leaving gaps */
+}
+
+/* Popup Window (Windows 98 style) */
+.popup-window {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    max-height: 90%;
+    border: 2px solid #000080;
+    background-color: #FFFFFF;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.popup-header {
+    background-color: #000080;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #808080;
+}
+
+.popup-title {
+    margin-left: 10px;
+}
+
+.close-btn {
+    background-color: #C0C0C0;
+    border: 1px solid #808080;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.popup-content {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#popupImage {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

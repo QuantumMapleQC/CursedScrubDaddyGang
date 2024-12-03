@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursed Scrub Daddy Gang</title>
+
+    <!-- Favicon (Icon on the tab) -->
+    <link rel="icon" href="Icon/Icon.png" type="image/x-icon">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #008080;
+            font-family: Tahoma, Geneva, sans-serif;
+            color: black;
+        }
+        .window {
+            background-color: #C0C0C0;
+            border: 2px solid #808080;
+            width: 80%;
+            max-width: 900px;
+            margin: 50px auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .window-header {
+            background-color: #000080;
+            color: white;
+            padding: 8px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #808080;
+            box-sizing: border-box;
+        }
+        .window-header span {
+            margin-left: 5px;
+        }
+        .window-header button {
+            background-color: #C0C0C0;
+            border: 1px solid #808080;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .window-content {
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+        }
+        h1 {
+            color: #000080;
+            font-size: 24px;
+        }
+        h2, h3 {
+            color: #000080;
+        }
+        p {
+            line-height: 1.6;
+        }
+        a {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #551A8B;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #C0C0C0;
+            border-top: 2px solid #808080;
+        }
+
+        /* Mute button styling */
+        .mute-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #C0C0C0;
+            border: 2px solid #808080;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Image styling to make it large */
+        .window-content img {
+            width: 100%; /* Make image take up full width of the window */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px;
+        }
+
+        /* Embed video styling */
+        .video-embed {
+            margin-top: 20px;
+            max-width: 100%;
+            height: 315px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Music (Background audio) -->
+    <audio id="background-music" autoplay loop>
+        <source src="MapleBeLike.mp3" type="audio/mp3"> <!-- Change this path to your music file -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="window">
+        <div class="window-header">
+            <span>Scrubbing Daddy - The Cursed Sponge Phenomenon</span>
+            <button onclick="this.closest('.window').style.display='none'">X</button>
+        </div>
+        <div class="window-content">
+            <!-- Image inside content area -->
+            <img src="Icon/The Cursed Sponge Phenomenon.png" alt="icon">
+
+            <h2>Why Did We Make This?</h2>
+            <p>The purpose of this site is simple: to archive all the funny and cursed memes that have been created around <strong>Scrubbing Daddy</strong>. While the real-life Scrub Daddy is a useful kitchen sponge, it has become a symbol of internet humor. With countless memes and cursed images uploaded to platforms like TikTok, Snapchat, and YouTube, we decided to create a space to collect and preserve these hilarious, eerie, and often bizarre representations of the iconic sponge.</p>
+
+            <h2>What is Scrubbing Daddy?</h2>
+            <p><b>Scrubbing Daddy</b> is a real, physical product that was first introduced in 2012 as an innovative cleaning tool for dishwashing. It’s a smiley-faced sponge made from a unique material called <i>FlexTexture</i>, which changes its texture depending on the water temperature. In warm water, it becomes soft and gentle for delicate dishes, while in cold water, it turns firmer, providing a more powerful scrubbing action for tougher messes. This made it incredibly versatile, and it quickly gained popularity as an effective and fun kitchen tool.</p>
+
+            <p>The sponge’s cheerful, smiley face became an instantly recognizable design feature, adding a touch of personality to an otherwise mundane cleaning chore. This unique combination of design and functionality led to its success, making it one of the most well-known cleaning products in the market. Scrubbing Daddy became so popular that it even earned a spot on the hit TV show <i>Shark Tank</i>, where it received a significant investment from Lori Greiner, further propelling its success.</p>
+
+            <p>However, as time passed, the sponge's delicate nature began to wear thin with heavy usage. Despite its initial utility, Scrubbing Daddy was slowly transformed into something more. Enter <strong>Gen Z</strong> – they took the once innocent Scrubbing Daddy and began uploading cursed and absurd images of it to platforms like TikTok, Snapchat, YouTube, and more. These images are often distorted, glitchy, or have unsettling faces, turning the happy sponge into a strange, unsettling internet meme.</p>
+
+            <p>As these memes and images began to spread, the innocent cleaning tool evolved into an entire meme culture, one that combined dark humor and surrealism. Now, people across the internet are uploading bizarre versions of Scrubbing Daddy, creating a phenomenon that reflects both nostalgia and internet absurdity.</p>
+
+            <p>To learn more about the original Scrubbing Daddy, you can visit its official website here: <b><a href="https://scrubdaddy.com/" target="_blank">ScrubDaddy.com</a></b>.</p>
+
+            <h2>What We’re Doing Here</h2>
+            <p>grinding every single cursed image of Scrubbing Daddy!</p>
+
+        <a href="media.html">Media Archive</a>
+        </div>
+    </div>
+
+    <!-- Mute Button -->
+    <div class="mute-button" id="mute-button">
+        🔊
+    </div>
+
+    <script>
+        const audio = document.getElementById('background-music');
+        const muteButton = document.getElementById('mute-button');
+
+        let isMuted = false;
+
+        // Mute or unmute the audio
+        muteButton.addEventListener('click', function() {
+            isMuted = !isMuted;
+            if (isMuted) {
+                audio.muted = true;
+                muteButton.textContent = '🔇';  // Change icon to muted
+            } else {
+                audio.muted = false;
+                muteButton.textContent = '🔊';  // Change icon back to unmuted
+            }
+        });
+    </script>
+
+</body>
+</html>
