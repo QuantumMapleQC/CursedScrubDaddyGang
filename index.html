@@ -3,148 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursed Scrubbing Daddy - The 98 Style</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <title>Cursed Scrub Daddy Gang</title>
+
+    <!-- Favicon (Icon on the tab) -->
+    <link rel="icon" href="Icon/Icon.png" type="image/x-icon">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #008080;
+            font-family: Tahoma, Geneva, sans-serif;
+            color: black;
+        }
+        .window {
+            background-color: #C0C0C0;
+            border: 2px solid #808080;
+            width: 80%;
+            max-width: 900px;
+            margin: 50px auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .window-header {
+            background-color: #000080;
+            color: white;
+            padding: 8px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #808080;
+            box-sizing: border-box;
+        }
+        .window-header span {
+            margin-left: 5px;
+        }
+        .window-header button {
+            background-color: #C0C0C0;
+            border: 1px solid #808080;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .window-content {
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+        }
+        h1 {
+            color: #000080;
+            font-size: 24px;
+        }
+        h2, h3 {
+            color: #000080;
+        }
+        p {
+            line-height: 1.6;
+        }
+        a {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #551A8B;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #C0C0C0;
+            border-top: 2px solid #808080;
+        }
+
+        /* Mute button styling */
+        .mute-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #C0C0C0;
+            border: 2px solid #808080;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Image styling to make it large */
+        .window-content img {
+            width: 100%; /* Make image take up full width of the window */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px;
+        }
+
+        /* Embed video styling */
+        .video-embed {
+            margin-top: 20px;
+            max-width: 100%;
+            height: 315px;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Music (Background audio) -->
+    <audio id="background-music" autoplay loop>
+        <source src="MapleBeLike.mp3" type="audio/mp3"> 
+        Your browser does not support the audio element.
+    </audio>
+
     <div class="window">
         <div class="window-header">
-            <span>Cursed Scrub Daddy Gang! - Media Archive</span>
+            <span>Scrubbing Daddy - The Cursed Sponge Phenomenon</span>
             <button onclick="this.closest('.window').style.display='none'">X</button>
         </div>
         <div class="window-content">
-            <strong>Cursed Scrub Daddy Gang</strong>
-            <h2>Find the funniest ones you like and share them with your friends!</h2>
-            <p>This gallery contains the most bizarre and cursed images, videos, and links of the Scrubbing Daddy sponge. Explore these weird and unsettling pieces of media that have made their way across the internet.</p>
+            <img src="Icon/The Cursed Sponge Phenomenon.png" alt="icon">
 
-            <!-- Search Bar -->
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Search by tags...">
-                <button onclick="searchMedia()">Search</button>
-            </div>
+            <h2>Why Did We Make This?</h2>
+            <p>The purpose of this site is simple: to archive all the funny and cursed memes that have been created around <strong>Scrubbing Daddy</strong>. While the real-life Scrub Daddy is a useful kitchen sponge, it has become a symbol of internet humor. With countless memes and cursed images uploaded to platforms like TikTok, Snapchat, and YouTube, we decided to create a space to collect and preserve these hilarious, eerie, and often bizarre representations of the iconic sponge.</p>
 
-            <!-- Media Gallery -->
-            <div class="media-gallery">
-                <!-- Adding all images from the list with relevant tags -->
-                <div class="media-container" data-tags="funny, cursed" onclick="openPopup(this)">
-                    <img src="pics/4c2d40869878f4cbc3ac893a6ff8718dfc3767e7.png" alt="Cursed Image 1">
-                </div>
-                <div class="media-container" data-tags="meme" onclick="openPopup(this)">
-                    <img src="pics/images1.png" alt="Image 1">
-                </div>
-                <div class="media-container" data-tags="dark, cursed" onclick="openPopup(this)">
-                    <img src="pics/9k.png" alt="Cursed Image 2">
-                </div>
-                <div class="media-container" data-tags="funny" onclick="openPopup(this)">
-                    <img src="pics/ITSDYING.png" alt="It's Dying Image">
-                </div>
-                <div class="media-container" data-tags="random, cursed" onclick="openPopup(this)">
-                    <img src="pics/a.png" alt="Image A">
-                </div>
-                <div class="media-container" data-tags="meme" onclick="openPopup(this)">
-                    <img src="pics/MANIMDEAD.png" alt="Man I'm Dead Image">
-                </div>
-                <div class="media-container" data-tags="random, spooky" onclick="openPopup(this)">
-                    <img src="pics/asasasas.png" alt="Random Image">
-                </div>
-                <div class="media-container" data-tags="dark" onclick="openPopup(this)">
-                    <img src="pics/OIP.png" alt="OIP Image">
-                </div>
-                <div class="media-container" data-tags="funny, bbq" onclick="openPopup(this)">
-                    <img src="pics/bbq daddy.png" alt="BBQ Daddy">
-                </div>
-                <div class="media-container" data-tags="funny, dead" onclick="openPopup(this)">
-                    <img src="pics/bro hes dead.png" alt="Bro He's Dead">
-                </div>
-                <div class="media-container" data-tags="meme, weird" onclick="openPopup(this)">
-                    <img src="pics/come my child.png" alt="Come My Child">
-                </div>
-                <div class="media-container" data-tags="dark" onclick="openPopup(this)">
-                    <img src="pics/deaddddddd.png" alt="Dead Image">
-                </div>
-                <div class="media-container" data-tags="glitch" onclick="openPopup(this)">
-                    <img src="pics/sas.png" alt="Glitch Image">
-                </div>
-                <div class="media-container" data-tags="funny" onclick="openPopup(this)">
-                    <img src="pics/sdsdsdsd.png" alt="SDSDSDSD">
-                </div>
-                <div class="media-container" data-tags="spooky" onclick="openPopup(this)">
-                    <img src="pics/DEAD.png" alt="DEAD">
-                </div>
-                <div class="media-container" data-tags="meme, funny" onclick="openPopup(this)">
-                    <img src="pics/scrub_duddu.png" alt="Scrub Duddu">
-                </div>
-                <div class="media-container" data-tags="discord, meme" onclick="openPopup(this)">
-                    <img src="pics/discord.png" alt="Discord Image">
-                </div>
-                <div class="media-container" data-tags="surreal" onclick="openPopup(this)">
-                    <img src="pics/SDD.png" alt="SDD">
-                </div>
-                <div class="media-container" data-tags="random" onclick="openPopup(this)">
-                    <img src="pics/fdg.png" alt="FDG Image">
-                </div>
-                <div class="media-container" data-tags="random, cursed" onclick="openPopup(this)">
-                    <img src="pics/sqwe3.png" alt="SQWE3 Image">
-                </div>
-                <div class="media-container" data-tags="weird" onclick="openPopup(this)">
-                    <img src="pics/troll.png" alt="Troll Image">
-                </div>
-                <div class="media-container" data-tags="help, funny" onclick="openPopup(this)">
-                    <img src="pics/help.png" alt="Help Image">
-                </div>
-                <div class="media-container" data-tags="cursed" onclick="openPopup(this)">
-                    <img src="pics/imageKLYIGLYGLIYGs.png" alt="Random Image">
-                </div>
-                <div class="media-container" data-tags="cursed, glitch" onclick="openPopup(this)">
-                    <img src="pics/xc.png" alt="XC Image">
-                </div>
-                <div class="media-container" data-tags="dark, glitch" onclick="openPopup(this)">
-                    <img src="pics/zfdgzfdg.png" alt="ZFDGZ Image">
-                </div>
-            </div>
+            <h2>What is Scrubbing Daddy?</h2>
+            <p><b>Scrubbing Daddy</b> is a real, physical product that was first introduced in 2012 as an innovative cleaning tool for dishwashing. It’s a smiley-faced sponge made from a unique material called <i>FlexTexture</i>, which changes its texture depending on the water temperature. In warm water, it becomes soft and gentle for delicate dishes, while in cold water, it turns firmer, providing a more powerful scrubbing action for tougher messes. This made it incredibly versatile, and it quickly gained popularity as an effective and fun kitchen tool.</p>
+
+            <p>The sponge’s cheerful, smiley face became an instantly recognizable design feature, adding a touch of personality to an otherwise mundane cleaning chore. This unique combination of design and functionality led to its success, making it one of the most well-known cleaning products in the market. Scrubbing Daddy became so popular that it even earned a spot on the hit TV show <i>Shark Tank</i>, where it received a significant investment from Lori Greiner, further propelling its success.</p>
+
+            <p>However, as time passed, the sponge's delicate nature began to wear thin with heavy usage. Despite its initial utility, Scrubbing Daddy was slowly transformed into something more. Enter <strong>Gen Z</strong> – they took the once innocent Scrubbing Daddy and began uploading cursed and absurd images of it to platforms like TikTok, Snapchat, YouTube, and more. These images are often distorted, glitchy, or have unsettling faces, turning the happy sponge into a strange, unsettling internet meme.</p>
+
+            <p>As these memes and images began to spread, the innocent cleaning tool evolved into an entire meme culture, one that combined dark humor and surrealism. Now, people across the internet are uploading bizarre versions of Scrubbing Daddy, creating a phenomenon that reflects both nostalgia and internet absurdity.</p>
+
+            <p>To learn more about the original Scrubbing Daddy, you can visit its official website here: <b><a href="https://scrubdaddy.com/" target="_blank">ScrubDaddy.com</a></b>.</p>
+
+            <h2>What We’re Doing Here</h2>
+            <p>grinding every single cursed image of Scrubbing Daddy!</p>
+
+        <a href="media.html">Media Archive</a>
         </div>
     </div>
 
-    <!-- Popup Window for Full Image -->
-    <div id="popupWindow" class="popup-window">
-        <div class="popup-header">
-            <span class="popup-title">Full Image View</span>
-            <button class="close-btn" onclick="closePopup()">X</button>
-        </div>
-        <div class="popup-content">
-            <img id="popupImage" src="" alt="Full Image">
-        </div>
+    <!-- Mute Button -->
+    <div class="mute-button" id="mute-button">
+        🔊
     </div>
 
     <script>
-        // Function to open the popup with full-size image
-        function openPopup(element) {
-            var imgSrc = element.querySelector('img').src; // Get the image source
-            document.getElementById('popupImage').src = imgSrc; // Set the source in the popup
-            document.getElementById('popupWindow').style.display = "flex"; // Show the popup
-        }
+        const audio = document.getElementById('background-music');
+        const muteButton = document.getElementById('mute-button');
 
-        // Function to close the popup
-        function closePopup() {
-            document.getElementById('popupWindow').style.display = "none"; // Hide the popup
-        }
+        let isMuted = false;
 
-        // Search function to filter images based on tags
-        function searchMedia() {
-            var searchTerm = document.getElementById('search-input').value.toLowerCase(); // Get the search term
-            var mediaContainers = document.querySelectorAll('.media-container');
-            
-            // Loop through each media container
-            mediaContainers.forEach(function(container) {
-                var tags = container.getAttribute('data-tags').toLowerCase(); // Get tags of current media container
-                if (tags.includes(searchTerm)) {
-                    container.style.display = 'block'; // Show the image if it matches the search
-                } else {
-                    container.style.display = 'none'; // Hide the image if it doesn't match
-                }
-            });
-        }
+        // Mute or unmute the audio
+        muteButton.addEventListener('click', function() {
+            isMuted = !isMuted;
+            if (isMuted) {
+                audio.muted = true;
+                muteButton.textContent = '🔇';  // Change icon to muted
+            } else {
+                audio.muted = false;
+                muteButton.textContent = '🔊';  // Change icon back to unmuted
+            }
+        });
     </script>
 
 </body>
